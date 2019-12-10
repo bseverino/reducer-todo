@@ -1,9 +1,14 @@
 export const initialState = {
     todo: [
         {
-            item: 'Learn about reducers',
+            item: 'Buy presents',
             completed: false,
             id: 3892987589
+        },
+        {
+            item: 'Set up the tree',
+            completed: false,
+            id: 3892992830
         }
     ]
 };

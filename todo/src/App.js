@@ -1,11 +1,12 @@
 import React, { useState, useReducer } from 'react';
+import { Container, Row, Col } from 'reactstrap';
 
 import { reducer, initialState } from './reducers/todoReducer';
 
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
 
-function App() {
+function App(props) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [newItemText, setNewItemText] = useState('');
   console.log(state);
@@ -30,18 +31,31 @@ function App() {
   }
 
   return (
-    <div className='App'>
-      <TodoList
-        todo={state.todo}
-        toggleComplete={toggleComplete}
-      />
-      <TodoForm
-        newItemText={newItemText}
-        handleChanges={handleChanges}
-        handleSubmit={handleSubmit}
-        clearCompleted={clearCompleted}
-      />
-    </div>
+    <Container className='App' fluid={true}>
+      <Row>
+        <Col>
+          <h1>Holiday Todo List</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <TodoList
+            todo={state.todo}
+            toggleComplete={toggleComplete}
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <TodoForm
+            newItemText={newItemText}
+            handleChanges={handleChanges}
+            handleSubmit={handleSubmit}
+            clearCompleted={clearCompleted}
+          />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

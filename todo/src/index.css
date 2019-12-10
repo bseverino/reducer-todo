@@ -12,6 +12,16 @@ code {
     monospace;
 }
 
+.App {
+  margin: 200px auto;
+  max-width: 600px;
+}
+
+.list-item:hover {
+  cursor: pointer;
+}
+
 .completed {
   text-decoration: line-through;
+  background: gray;
 }

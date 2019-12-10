@@ -1,17 +1,21 @@
 import React from 'react';
+import { Form, Input, Button, ButtonGroup } from 'reactstrap';
 
 function TodoForm(props) {
     return (
-        <form onSubmit={props.handleSubmit}>
-            <input
+        <Form onSubmit={props.handleSubmit}>
+            <Input
                 type='text'
                 name='newItemText'
+                placeholder='New Todo Item'
                 value={props.newItemText}
                 onChange={props.handleChanges}
             />
-            <button type='submit'>Add Item</button>
-            <button onClick={props.clearCompleted}>Clear Completed</button>
-        </form>
+            <ButtonGroup>
+                <Button type='submit'>Add Item</Button>
+                <Button onClick={props.clearCompleted}>Clear Completed</Button>
+            </ButtonGroup>
+        </Form>
     );
 };
 
