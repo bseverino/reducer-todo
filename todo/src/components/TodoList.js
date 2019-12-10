@@ -4,11 +4,15 @@ import TodoItem from './TodoItem';
 
 function TodoList(props) {
     return (
-        <ul>
-            {props.todoState.map(item => (
-                <TodoItem key={item.id} item={item} />
+        <div>
+            {props.todo.map(item => (
+                <TodoItem
+                    {...props}
+                    key={item.id}                    
+                    item={item}                    
+                />
             ))}
-        </ul>
+        </div>
     );
 };
 

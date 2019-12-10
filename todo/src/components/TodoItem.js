@@ -2,7 +2,12 @@ import React from 'react';
 
 function TodoItem(props) {
     return (
-        <li>{props.item.item}</li>
+        <div
+            className={props.item.completed ? 'completed' : ''}
+            onClick={() => props.toggleComplete(props.item.id)}
+        >
+            <p>{props.item.item}</p>
+        </div>
     );
 };
 
