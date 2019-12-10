@@ -32,29 +32,19 @@ function App(props) {
 
   return (
     <Container className='App' fluid={true}>
-      <Row>
-        <Col>
-          <h1>Holiday Todo List</h1>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <TodoList
+      <div className='title'>
+        <h1>Holiday Todo List</h1>
+      </div>
+      <TodoList
             todo={state.todo}
             toggleComplete={toggleComplete}
           />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <TodoForm
+      <TodoForm
             newItemText={newItemText}
             handleChanges={handleChanges}
             handleSubmit={handleSubmit}
             clearCompleted={clearCompleted}
           />
-        </Col>
-      </Row>
     </Container>
   );
 }

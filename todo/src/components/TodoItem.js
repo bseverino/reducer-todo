@@ -1,14 +1,14 @@
 import React from 'react';
-import { ListGroupItem } from 'reactstrap';
+import { ListGroupItem, Badge } from 'reactstrap';
 
 function TodoItem(props) {
     return (
         <ListGroupItem            
-            className={`list-item ${props.item.completed ? 'completed' : ''}`}
+            className='list-item'
             color={props.item.completed ? 'success' : 'danger'}
             onClick={() => props.toggleComplete(props.item.id)}
         >
-            {props.item.item}
+            {props.item.item} {props.item.completed? <Badge pill>✔</Badge> : null}
         </ListGroupItem>
     );
 };

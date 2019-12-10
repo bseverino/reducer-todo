@@ -5,7 +5,7 @@ import TodoItem from './TodoItem';
 
 function TodoList(props) {
     return (
-        <ListGroup>
+        <ListGroup className='todo-list'>
             {props.todo.map(item => (
                 <TodoItem
                     {...props}
