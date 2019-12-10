@@ -1,12 +1,16 @@
+var moment = require('moment');
+
 export const initialState = {
     todo: [
         {
             item: 'Buy presents',
             completed: false,
-            id: 3892987589
+            time: '',
+            id: 3892987589,
         },
         {
             item: 'Set up the tree',
+            time: '',
             completed: false,
             id: 3892992830
         }
@@ -32,10 +36,20 @@ export const reducer = (state, action) => {
                 ...state,
                 todo: state.todo.map(item => {
                     if (item.id === action.payload) {
-                        return {
+                        if (!item.completed) {
+                            return {
+                                ...item,
+                                completed: !item.completed,
+                                time: moment().format('hA')
+                            }
+                        }
+                        else {
+                            return {
                             ...item,
-                            completed: !item.completed
+                            completed: !item.completed,
+                            time: ''
                         };
+                        }
                     } else {
                         return item;
                     }
