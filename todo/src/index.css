@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gelasio&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Gelasio', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-image: url('./img/background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App {
+  margin: 100px auto;
+  max-width: 600px;
+  background: #FFF;
+  padding: 25px 25px 0;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.title {
+  background-image: linear-gradient(to left, green, red);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Leckerli One', cursive;  
+}
+
+.todo-list {
+  width: 90%;
+  margin: 25px 0;
+}
+
+.list-item:hover {
+  cursor: pointer;
+}
+
+.todo-form {
+  margin: 25px 0;
+}
