@@ -40,7 +40,7 @@ export const reducer = (state, action) => {
                             return {
                                 ...item,
                                 completed: !item.completed,
-                                time: moment().format('hA')
+                                time: moment().format('h:mmA')
                             }
                         }
                         else {
